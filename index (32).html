@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MindAR Lithium Atom - Hu Tao Marker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
+  </head>
+  <body style="margin: 0px; overflow: hidden;">
+    
+    <a-scene 
+      mindar-image="imageTargetSrc: hutao.mind; uiScanning: yes;" 
+      color-space="sRGB" 
+      renderer="colorManagement: true, physicallyCorrectLights" 
+      vr-mode-ui="enabled: false" 
+      device-orientation-permission-ui="enabled: false">
+
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+      
+      <a-entity mindar-image-target="targetIndex: 0">
+        
+       
+        <a-entity id="atom" position="0 0 0" scale="0.2 0.2 0.2">
+          
+          <a-sphere 
+            radius="0.7" 
+            src="waternormals.jpg"
+            segments-height="32">
+          </a-sphere>
+        
+          <a-entity rotation="0 0 0">
+            <a-torus arc="360" radius="5" radius-tubular="0.03" segments-tubular="128" color="black" opacity="0.5" scale="0.38 1 1">
+              <a-entity animation="property: rotation; to: 0 0 360; loop: true; dur: 4100; easing: linear">
+                <a-sphere position="5 0 0" radius="0.25" color="red"></a-sphere>
+              </a-entity>
+            </a-torus>
+          </a-entity>
+
+          <a-entity rotation="0 0 60">
+            <a-torus arc="360" radius="5" radius-tubular="0.03" segments-tubular="128" color="black" opacity="0.5" scale="0.38 1 1">
+              <a-entity animation="property: rotation; to: 0 0 360; loop: true; dur: 5800; easing: linear">
+                <a-sphere position="5 0 0" radius="0.25" color="blue"></a-sphere>
+              </a-entity>
+            </a-torus>
+          </a-entity>
+
+          <a-entity rotation="0 0 120">
+            <a-torus arc="360" radius="5" radius-tubular="0.03" segments-tubular="128" color="black" opacity="0.5" scale="0.38 1 1">
+              <a-entity animation="property: rotation; to: 0 0 360; loop: true; dur: 7500; easing: linear">
+                <a-sphere position="5 0 0" radius="0.25" color="green"></a-sphere>
+              </a-entity>
+            </a-torus>
+          </a-entity>
+
+        </a-entity>
+      </a-entity>
+
+    </a-scene>
+  </body>
+</html>
